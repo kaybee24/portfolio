@@ -1,0 +1,40 @@
+section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 10rem;
+}
+
+/* Even columns */
+
+.even-columns,
+.uneven-column-70,
+.uneven-column-40 {
+    display: flex;
+    gap: 2rem;
+}
+
+/* select all direct children */
+.even-columns > * {
+    flex-basis: 100%;
+}
+
+/* Uneven columns */
+
+.uneven-column-70:nth-of-type(1){
+    flex: 3;
+}
+
+.uneven-column-70:nth-of-type(2){
+    flex: 1;    
+}
+
+.uneven-column-40:nth-of-type(1){
+    flex: 1;
+}
+
+.uneven-column-40:nth-of-type(2){
+    flex: 3;    
+}

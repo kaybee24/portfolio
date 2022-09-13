@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(113, 205, 197, 1);
+}
+
+/* Heading und Typo */
+
+h1, h2 {
+    text-transform: uppercase;
+}
+
+h1 {
+    font: 700 4.5rem/5.5rem 'Lato', Helvetica, sans-serif;
+    color: rgba(33, 33, 33, 1);
+}
+
+h2 {
+    font: 700 2.5rem/3.2rem 'Lato', Helvetica, sans-serif;
+    color: rgba(33, 33, 33, 1);
+}
+
+h3 {
+    font: 400 1.75rem/2.5rem 'Lato', Helvetica, sans-serif;
+    color: rgba(33, 33, 33, 1);
+}
+
+p {
+    font: 300 1.1rem/1.8rem 'Lato', Helvetica, sans-serif;
+    color: rgba(33, 33, 33, 1);
+    margin-bottom: 2rem;
+}
+
+.small {
+    font: 300 0.9rem/1.4rem 'Lato', Helvetica, sans-serif;
+    color: rgba(33, 33, 33, 1);
+}
+
+/* Button */
+
+.btn-primary {
+    background-color: rgba(51, 51, 51, 1);
+    border-color: rgba(51, 51, 51, 1);
+    color: rgba(255, 255, 255, 1);
+    border-radius: 0.15rem;
+    font: 300 1rem/1.8rem 'Lato', Helvetica, sans-serif;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: rgba(33, 33, 33, 1);
+    border-color: rgba(33, 33, 33, 1);
+}
+
+.btn-primary:active {
+    background-color: rgba(42, 77, 74, 1);
+    border-color: rgba(42, 77, 74, 1);
+}
+
+/* sections */
+
+.intro p {
+    max-width: 80ch;
+}
+
+/* Footer */
+
+.bg-footer {
+    padding-top: 1rem;
+    background-color: rgba(51, 51, 51, 1);
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Media Query */
+
+@media (max-width: 768px) {
+    .even-columns,
+    .uneven-column-70,
+    .uneven-column-40 {
+        flex-direction: column;
+    }
+
+    .intro img {
+        width: 100%;
+    }
+}

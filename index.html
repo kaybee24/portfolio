@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kaybee webdesign // Cape Town // Bremen</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="flexbox.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="slider-images.css">
+    <title>kaybee webdesign // Cape Town // Bremen</title>
+
 </head>
 
 <body>
@@ -85,22 +86,61 @@
             </div>
         </section>
 
-        <section id="slider" aria-label="photos">
-            <div class="carousel">
-                <button class="btn-carousel prev">&#8249;</button>
+        <section id="slider-images" class="slider-container" aria-label="photos">
+            <div class="product-container">
+                <button class="pre-btn">&#8249;</button>
+                <button class="next-btn">&#8250;</button>
 
-                <button class="btn-carousel next">&#8250;</button>
-                <ul>
-                    <li class="slide">
-                        <img src="resources/img/home_about_buttreasure-50.jpg">
-                    </li>
-                    <li class="slide">
-                        <img src="resources/img/home_about_capepoint-50.jpg">
-                    </li>
-                    <li class="slide">
-                        <img src="resources/img/home_about_istanbul-50.jpg">
-                    </li>
-                </ul>
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="topic-tag small">topic</span>
+                        <img src="resources/img/home_about_capepoint-50.jpg" alt="cape town picture">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-brand">Step 1</h2>
+                        <p class="product-short-description">short line about image</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="topic-tag small">topic</span>
+                        <img src="resources/img/home_about_capepoint-50.jpg" alt="cape town picture">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-brand">Step 2</h2>
+                        <p class="product-short-description">short line about image</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="topic-tag small">topic</span>
+                        <img src="resources/img/home_about_capepoint-50.jpg" alt="cape town picture">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-brand">Step 3</h2>
+                        <p class="product-short-description">short line about image</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="topic-tag small">topic</span>
+                        <img src="resources/img/home_about_capepoint-50.jpg" alt="cape town picture">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-brand">Step 4</h2>
+                        <p class="product-short-description">short line about image</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="topic-tag small">topic</span>
+                        <img src="resources/img/home_about_capepoint-50.jpg" alt="cape town picture">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-brand">Step 5</h2>
+                        <p class="product-short-description">short line about image</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -151,8 +191,10 @@
                 </div>
             </div>
         </section>
-
     </main>
+
+    <script src="slider-images.js" defer></script>
+
 </body>
 
 </html>

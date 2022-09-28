@@ -22,6 +22,7 @@ h1 {
 h2 {
     font: 700 2.5rem/3.2rem 'Lato', Helvetica, sans-serif;
     color: rgba(33, 33, 33, 1);
+    margin-bottom: 1rem;
 }
 
 h3 {
@@ -29,7 +30,8 @@ h3 {
     color: rgba(33, 33, 33, 1);
 }
 
-p {
+p,
+span {
     font: 300 1.1rem/1.8rem 'Lato', Helvetica, sans-serif;
     color: rgba(33, 33, 33, 1);
     margin-bottom: 2rem;

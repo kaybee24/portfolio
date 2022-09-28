@@ -1,0 +1,109 @@
+/* PRODUCTS */
+
+.slider-container {
+    width: 100%;
+    position: relative;
+    background-color: rgb(156, 234, 228);
+}
+  
+  .product-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 2.5rem 8rem;
+    scroll-behavior: smooth;
+  }
+  
+  .product-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .product-card {
+    flex: 0 0 auto;
+    width: 22rem;
+    height: 30rem;
+    margin-right: 2.25rem;
+  }
+  
+  .product-image {
+    position: relative;
+    width: 100%;
+    height: 22rem;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;  
+  }
+  
+  .product-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .topic-tag {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 0.5rem 0.8rem;
+    border-radius: 50px;
+    color: rgba(255, 255, 255, 1);
+    right: 10px;
+    top: 10px;
+    text-transform: capitalize;
+  }
+
+  .product-info {
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+  }
+  
+  .product-brand {
+    text-transform: uppercase;
+  }
+  
+  .product-short-description {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    text-transform: capitalize;
+    margin: 5px 0;
+  }
+ 
+  .pre-btn,
+  .next-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 7;
+    background: none;
+    border: none;
+    padding: 1.2rem;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.4);
+    color: rgba(33, 33, 33, 0.7);
+    cursor: pointer;
+  }
+  
+  .pre-btn {
+    border-top-right-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    left: -0.7rem;
+  }
+  
+  .next-btn {
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    right: -0.7rem;
+  }
+  
+  .pre-btn:hover,
+  .next-btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(33, 33, 33, 1);
+  }
+  
+  

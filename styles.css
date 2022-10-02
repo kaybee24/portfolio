@@ -1,73 +1,347 @@
-* {
-    margin: 0;
+/* ----------- */
+/* utility classes – allow things to be much mor modular */
+/* ----------- */
+
+/* Anything that is not the first child – of course, also last child with margin-bottom is possible */
+.flow > *:where(:not(:first-child))  { 
+    margin-top: 1rem;
+}
+
+.container {
+    display: flex;
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 88rem;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.flow > *:where(:not(:first-child)) {
+    margin-top: var(--flow-space, 1rem);
+}
+
+.d-block {
+    display: block;
+}
+
+
+
+/* Even columns */
+
+.even-columns {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+
+/* select all direct children */
+.even-columns > * {
+    flex-basis: 100%;
+    flex-grow: 1;
+}
+
+/*
+/* Uneven columns 
+
+.uneven-column-70:nth-of-type(1){
+    flex: 3;
+}
+
+.uneven-column-70:nth-of-type(2){
+    flex: 1;    
+}
+
+.uneven-column-40:nth-of-type(1){
+    flex: 1;
+}
+
+.uneven-column-40:nth-of-type(2){
+    flex: 3;    
+}
+*/
+
+
+@media (max-width: 35em) {
+    .even-columns {
+        flex-direction: column;
+    }
+}
+
+
+/*
+.container-grid {
+    display: grid;
+    column-gap: var(--container-gap, 2rem);
+    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
+}
+
+.container-grid > *:first-child {
+    grid-column: 2;
+}
+
+.container-grid > *:last-child {
+    grid-column: 3;
+}
+*/
+
+/* screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
     padding: 0;
-    box-sizing: border-box;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+  }
+
+  .box {
+    background: lightblue;
+    padding: 3rem;
 }
 
-body {
-    background-color: rgba(113, 205, 197, 1);
+
+/* ----------- */
+/* custom properties */
+/* ----------- */
+
+:root {
+    --clr-dark: 0 0% 13%;
+    --clr-white: 0 0% 100%;
+    --clr-brand: 175 48% 62%;
+    --clr-brand-light: 175 65% 76%;
+    --clr-brand-dark: 173 29% 23%;
+    --clr-accent: 3 65% 67%;
+
+    /* font-sizes */
+    --fs-900: 6.25rem;
+    --fs-800: 3rem;
+    --fs-700: 2rem;
+    --fs-600: 1.375rem;
+    --fs-500: 1.125rem;
+    --fs-400: 1rem;
+    --fs-300: 0.875rem;
+
+    /* font-families */
+    --ff-sans-normal: "Lato", sans-serif;
+
+    /* font-weight */
+    --fw-700: 700;
+    --fw-400: 400;
+    --fw-300: 300;
 }
 
-/* Heading und Typo */
 
-h1, h2 {
-    text-transform: uppercase;
+/* colors */
+
+.bg-dark { background-color: hsl( var(--clr-dark) );}
+.bg-white { background-color: hsl( var(--clr-white) );}
+.bg-brand { background-color: hsl( var(--clr-brand) );}
+.bg-brand-light { background-color: hsl( var(--clr-brand-light) );}
+.bg-brand-dark { background-color: hsl( var(--clr-brand-dark) );}
+.bg-accent { background-color: hsl( var(--clr-accent) );}
+
+.text-dark { color: hsl( var(--clr-dark) );}
+.text-white { color: hsl( var(--clr-white) );}
+.text-brand { color: hsl( var(--clr-brand) );}
+.text-brand-light { color: hsl( var(--clr-brand-light) );}
+.text-accent { color: hsl( var(--clr-accent) );}
+
+
+/* typography */
+
+.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 1.5px; } 
+
+.uppercase { text-transform: uppercase; }
+
+.fs-900 { font-size: var(--fs-900); }
+.fs-800 { font-size: var(--fs-800); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-300 { font-size: var(--fs-300); }
+
+.fs-900,
+.fs-800,
+.fs-700 {
+    line-height: 1.1;
 }
 
-h1 {
-    font: 700 4.5rem/5.5rem 'Lato', Helvetica, sans-serif;
-    color: rgba(33, 33, 33, 1);
+.fs-500 {
+    line-height: 1.5;
 }
 
-h2 {
-    font: 700 2.5rem/3.2rem 'Lato', Helvetica, sans-serif;
-    color: rgba(33, 33, 33, 1);
-    margin-bottom: 1rem;
+.fw-700 { font-weight: 700;}
+.fw-400 { font-weight: 400;}
+.fw-300 { font-weight: 300;}
+
+
+/* ------------------- */
+/* Compontents         */
+/* ------------------- */
+
+.large-button {
+    position: relative;
+    display: inline-grid; /* instead of block or inline-block to center the item nicely with next line */
+    place-items: center;
+    padding: 0 2em;
+    aspect-ratio: 7 / 2.5; 
+    text-decoration: none;
+    border-radius: 0.2em;
+    opacity: 1;
+    transition: background-color 500ms ease-in-out;
 }
 
-h3 {
-    font: 400 1.75rem/2.5rem 'Lato', Helvetica, sans-serif;
-    color: rgba(33, 33, 33, 1);
+.large-button:hover,
+.large-button:focus {
+    background: hsl( var(--clr-accent) );
+    opacity: 1;
 }
 
-p,
-span {
-    font: 300 1.1rem/1.8rem 'Lato', Helvetica, sans-serif;
-    color: rgba(33, 33, 33, 1);
-    margin-bottom: 2rem;
+/* primary navigation */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed; /* Set the navbar to fixed position */
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 7.5rem;
+    line-height: 7.5rem;
+    padding: 0rem 3rem;
+    box-shadow: 0px 0px 5px 1px rgba(22, 22, 22, 0.1);
 }
 
-.small {
-    font: 300 0.9rem/1.4rem 'Lato', Helvetica, sans-serif;
-    color: rgba(33, 33, 33, 1);
+.primary-navigation {
+    --underline-gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: hsl( var(--clr-brand-light) / 0.95 );
 }
 
-/* Button */
+.mobile-nav-toggle {
+    display: none;
+}
 
-.btn-primary {
-    background-color: rgba(51, 51, 51, 1);
-    border-color: rgba(51, 51, 51, 1);
-    color: rgba(255, 255, 255, 1);
-    border-radius: 0.15rem;
-    font: 300 1rem/1.8rem 'Lato', Helvetica, sans-serif;
-    padding: 0.75rem 2rem;
+@media (max-width: 35em) {
+    .navbar {
+        height: 0;
+        line-height: 2rem;
+    }
+    .primary-navigation {
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        list-style: none;
+        padding: min(20rem, 15vh) 2rem;
+        margin: 0;
+        flex-direction: column;
+        transform: translateX(100%);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        right: 1rem;
+        top: 2rem;
+        background: transparent;
+        background-image: url('./resources/img/icon-hamburger.svg');
+        background-repeat: no-repeat;
+        width: 1.5rem;
+        aspect-ratio: 1;
+        border: 0;
+    }
+}
+
+.primary-navigation a {
+    cursor: pointer;
     text-decoration: none;
 }
 
-.btn-primary:hover {
-    background-color: rgba(33, 33, 33, 1);
-    border-color: rgba(33, 33, 33, 1);
+.primary-navigation a > span {
+    font-weight: 700;
+    margin-right: .5em;
 }
 
-.btn-primary:active {
-    background-color: rgba(42, 77, 74, 1);
-    border-color: rgba(42, 77, 74, 1);
+.primary-navigation a span {
+    display:inline-block;
+    overflow:hidden;
+    height:15px;
+    line-height:15px;
+    position:relative
 }
 
+.primary-navigation a span em {
+    font-style:normal;
+    color: hsl( var(--clr-dark) );
+    position:relative;
+    display:block;
+    top:0;
+    transition:top .3s ease;
+    -webkit-transition:top .3s ease;
+    -moz-transition:top .3s ease
+}
+
+.primary-navigation a span em.hover {
+    color: hsl( var(--clr-accent) );
+}
+
+.primary-navigation a.active span em,
+.primary-navigation a:hover span em {
+    top:-15px
+} 
+
+
+
+/* ------------------------- */
 /* sections */
 
-.intro p {
-    max-width: 80ch;
+/* Logo in Navbar */
+
+.logo a {
+    font: 100 1.8rem/1.4 'Roboto', Helvetica, sans-serif;
+    color: rgba(33, 33, 33, 1);
+    text-decoration: none;
+}
+
+/* for later – add logo
+    a.text-gradient::before {
+    content: url('img/logo.png');
+    width: 44px;
+    height: 50px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+} */
+
+@media (max-width: 35em) {
+    .primary-navigation {
+        position: fixed;
+        inset: 0 0 0 30%; /* short hand for top bottom left rigth */
+        flex-direction: column;
+        
+    }
+}
+
+#entry {
+    margin-top: 10em;
 }
 
 /* Footer */
@@ -80,14 +354,9 @@ span {
 
 /* Media Query */
 
-@media (max-width: 768px) {
-    .even-columns,
-    .uneven-column-70,
-    .uneven-column-40 {
-        flex-direction: column;
-    }
-
-    .intro img {
+@media (max-width: 35em) {
+    .intro img,
+    img {
         width: 100%;
     }
 }

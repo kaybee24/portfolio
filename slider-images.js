@@ -1,8 +1,8 @@
-const productContainers = document.querySelectorAll('.product-container');
+const projectContainers = document.querySelectorAll('.project-container');
 const nextBtn = document.querySelectorAll('.next-btn');
 const preBtn = document.querySelectorAll('.pre-btn');
 
-productContainers.forEach((item, i) => {
+projectContainers.forEach((item, i) => {
     let containerDimensions = item.getBoundingClientRect();
     let containerWidth = containerDimensions.width;
 

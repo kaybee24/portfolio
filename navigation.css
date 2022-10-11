@@ -1,0 +1,136 @@
+
+/* ------------------- */
+/* Primary navigation */
+/* ------------------- */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    position: fixed; 
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 7.5rem;
+    line-height: 7.5rem;
+    padding: 0rem 3rem;
+    box-shadow: 0px 0px 5px 1px rgba(21, 21, 21, 0.1);
+}
+
+.primary-navigation {
+    --underline-gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: hsl( var(--clr-brand-light) / 0.95 );
+}
+
+.mobile-nav-toggle {
+    display: none;
+}
+
+@media (max-width: 45em) {
+    .navbar {
+        height: 5rem;
+        background-color: hsl( var(--clr-brand) );
+        line-height: 2rem;
+    }
+
+    .primary-navigation {
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        list-style: none;
+        padding: min(20rem, 15vh) 2rem;
+        margin: 0;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 500ms ease-in-out;
+    }
+
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 2000;
+        right: 1rem;
+        top: 2rem;
+        background: transparent;
+        background-image: url('./resources/img/icon-hamburger.svg');
+        background-repeat: no-repeat;
+        width: 1.5rem;
+        aspect-ratio: 1;
+        border: 0;
+    }
+
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url('./resources/img/icon-close.svg');
+    }
+
+    .mobile-nav-toggle:focus-visible {
+        outline-offset: 5px;
+    }
+}
+
+.primary-navigation a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.primary-navigation a > span {
+    font-weight: 700;
+    margin-right: .5em;
+}
+
+.primary-navigation a span {
+    display:inline-block;
+    overflow:hidden;
+    height:15px;
+    line-height:15px;
+    position:relative
+}
+
+.primary-navigation a span em {
+    font-style:normal;
+    color: hsl( var(--clr-dark) );
+    position:relative;
+    display:block;
+    top:0;
+    transition:top .3s ease;
+    -webkit-transition:top .3s ease;
+    -moz-transition:top .3s ease
+}
+
+.primary-navigation a span em.hover {
+    color: hsl( var(--clr-accent) );
+}
+
+.primary-navigation a.active span em,
+.primary-navigation a:hover span em {
+    top:-15px
+} 
+
+/* Logo in Navbar */
+
+@media (max-width: 45em) {
+    .logo {
+        margin-top: 1.3rem;      
+    }
+}
+
+.logo a {
+    font: 100 1.8rem/1.4 'Roboto', Helvetica, sans-serif;
+    color: rgba(33, 33, 33, 1);
+    text-decoration: none;
+}
+
+/* for later – add logo
+    a.text-gradient::before {
+    content: url('img/logo.png');
+    width: 44px;
+    height: 50px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+} */

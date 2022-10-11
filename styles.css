@@ -117,10 +117,10 @@
 
 :root {
     --clr-dark: 0 0% 13%;
-    --clr-white: 0 0% 100%;
+    --clr-light: 0 0% 100%;
     --clr-brand: 175 48% 62%;
-    --clr-brand-light: 175 65% 76%;
-    --clr-brand-dark: 173 29% 23%;
+    --clr-brand-light: 175 82% 76%;
+    --clr-brand-dark: 175 65% 17%;
     --clr-accent: 3 65% 67%;
 
     /* font-sizes */
@@ -145,14 +145,14 @@
 /* colors */
 
 .bg-dark { background-color: hsl( var(--clr-dark) );}
-.bg-white { background-color: hsl( var(--clr-white) );}
+.bg-light { background-color: hsl( var(--clr-light) );}
 .bg-brand { background-color: hsl( var(--clr-brand) );}
 .bg-brand-light { background-color: hsl( var(--clr-brand-light) );}
 .bg-brand-dark { background-color: hsl( var(--clr-brand-dark) );}
 .bg-accent { background-color: hsl( var(--clr-accent) );}
 
 .text-dark { color: hsl( var(--clr-dark) );}
-.text-white { color: hsl( var(--clr-white) );}
+.text-light { color: hsl( var(--clr-light) );}
 .text-brand { color: hsl( var(--clr-brand) );}
 .text-brand-light { color: hsl( var(--clr-brand-light) );}
 .text-accent { color: hsl( var(--clr-accent) );}
@@ -165,6 +165,10 @@
 .letter-spacing-1 { letter-spacing: 4.75px; } 
 .letter-spacing-2 { letter-spacing: 2.7px; } 
 .letter-spacing-3 { letter-spacing: 1.5px; } 
+
+.word-spacing-1 { word-spacing: 4.75px; } 
+.word-spacing-2 { word-spacing: 2.7px; } 
+.word-spacing-3 { word-spacing: 1.5px; } 
 
 .uppercase { text-transform: uppercase; }
 
@@ -201,6 +205,7 @@
     place-items: center;
     padding: 0 2em;
     aspect-ratio: 7 / 2.5; 
+    color: hsl( var(--clr-light) );
     text-decoration: none;
     border-radius: 0.2em;
     opacity: 1;
@@ -213,146 +218,11 @@
     opacity: 1;
 }
 
-/* primary navigation */
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    position: fixed; /* Set the navbar to fixed position */
-    z-index: 10;
-    top: 0;
-    width: 100%;
-    height: 7.5rem;
-    line-height: 7.5rem;
-    padding: 0rem 3rem;
-    box-shadow: 0px 0px 5px 1px rgba(22, 22, 22, 0.1);
-}
-
-.primary-navigation {
-    --underline-gap: 2rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background: hsl( var(--clr-brand-light) / 0.95 );
-}
-
-.mobile-nav-toggle {
-    display: none;
-}
-
-@media (max-width: 45em) {
-    .navbar {
-        height: 0;
-        line-height: 2rem;
-    }
-
-    .primary-navigation {
-        position: fixed;
-        z-index: 1000;
-        inset: 0 0 0 30%;
-        list-style: none;
-        padding: min(20rem, 15vh) 2rem;
-        margin: 0;
-        flex-direction: column;
-        transform: translateX(100%);
-        transition: transform 500ms ease-in-out;
-    }
-
-    .primary-navigation[data-visible="true"] {
-        transform: translateX(0);
-    }
-
-    .mobile-nav-toggle {
-        display: block;
-        position: absolute;
-        z-index: 2000;
-        right: 1rem;
-        top: 2rem;
-        background: transparent;
-        background-image: url('./resources/img/icon-hamburger.svg');
-        background-repeat: no-repeat;
-        width: 1.5rem;
-        aspect-ratio: 1;
-        border: 0;
-    }
-
-    .mobile-nav-toggle[aria-expanded="true"] {
-        background-image: url('./resources/img/icon-close.svg');
-    }
-
-    .mobile-nav-toggle:focus-visible {
-        outline-offset: 5px;
-    }
-}
-
-.primary-navigation a {
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.primary-navigation a > span {
-    font-weight: 700;
-    margin-right: .5em;
-}
-
-.primary-navigation a span {
-    display:inline-block;
-    overflow:hidden;
-    height:15px;
-    line-height:15px;
-    position:relative
-}
-
-.primary-navigation a span em {
-    font-style:normal;
-    color: hsl( var(--clr-dark) );
-    position:relative;
-    display:block;
-    top:0;
-    transition:top .3s ease;
-    -webkit-transition:top .3s ease;
-    -moz-transition:top .3s ease
-}
-
-.primary-navigation a span em.hover {
-    color: hsl( var(--clr-accent) );
-}
-
-.primary-navigation a.active span em,
-.primary-navigation a:hover span em {
-    top:-15px
-} 
-
 
 
 /* ------------------------- */
 /* sections */
 
-/* Logo in Navbar */
-
-.logo a {
-    font: 100 1.8rem/1.4 'Roboto', Helvetica, sans-serif;
-    color: rgba(33, 33, 33, 1);
-    text-decoration: none;
-}
-
-/* for later – add logo
-    a.text-gradient::before {
-    content: url('img/logo.png');
-    width: 44px;
-    height: 50px;
-    margin-right: 0.5rem;
-    vertical-align: middle;
-} */
-
-@media (max-width: 35em) {
-    .primary-navigation {
-        position: fixed;
-        inset: 0 0 0 30%; /* short hand for top bottom left rigth */
-        flex-direction: column;
-        
-    }
-}
 
 #entry {
     margin-top: 10em;

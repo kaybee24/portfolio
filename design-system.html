@@ -11,19 +11,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="flexbox.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="resources/css/reset.css">
+    <link rel="stylesheet" href="resources/css/styles.css">
 
     <title>kaybee // design system</title>
 </head>
 
 <body class="bg-brand text-dark">
     <div class="container d-block">
-        <h1 class="fs-900 uppercase">Design system</h1>
+        <h1 class="fs-900 uppercase" style="margin: 3rem 0 2rem 0;">Design system</h1>
 
         <!-- Colors -->
-        <section id="colors">
+        <section class="flow" id="colors">
             <h2 class="fs-800 uppercase letter-spacing-3">colors</h2>
             <div class="flex">
                 <div style="flex-grow: 1;">
@@ -84,7 +83,7 @@
         </section>
 
         <!-- Typography -->
-        <section id="typography" style="margin: 4rem 0;">
+        <section class="flow" id="typography" style="margin: 5rem 0;">
             <h2 class="fs-800 uppercase letter-spacing-3">Typography</h2>
             <div class="flex">
                 <div class="flow" style="flex-basis: 60%;">
@@ -131,40 +130,16 @@
         </section>
 
         <!-- Interactive elements -->
-        <section class="flow" id="interactive-elements">
+        <section class="flow" id="interactive-elements" style="margin-bottom: 5rem">
             <h2 class="fs-800 uppercase letter-spacing-3 word-spacing-1">Interactive elements</h2>
 
-            <!-- navigation -->
-            <div>
-                <nav>
-                    <ul class="primary-navigation flex">
-                        <li>
-                            <a class="uppercase text-white letter-spacing-2" href=" #" title="Projects">
-                                <span><em aria-hidden="true">Projects</em><em class="hover">Projects</em></span></a>
-                        </li>
-                        <li>
-                            <a class="uppercase text-white letter-spacing-2" href=" #" title="About">
-                                <span><em aria-hidden="true">About</em><em class="hover">About</em></span></a>
-                        </li>
-                        <li>
-                            <a class="uppercase text-white letter-spacing-2" href=" #" title="CV">
-                                <span><em aria-hidden="true">CV</em><em class="hover">CV</em></span></a>
-                        </li>
-                        <li>
-                            <a class="uppercase text-white letter-spacing-2" href=" #" title="Contact">
-                                <span><em aria-hidden="true">Contact</em><em class="hover">Contact</em></span></a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-
             <div class="flex">
-                <div style="margin-top: 3rem;">
-                    <!-- explore button -->
+                <div>
+                    <!-- button -->
                     <a href="#" class="large-button ff-sans-serif fs-500 text-white bg-dark">Explore</a>
                 </div>
 
-                <div style="margin-bottom: 50vh">
+                <div>
                     <!-- Tabs -->
 
 

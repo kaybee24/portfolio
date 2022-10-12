@@ -2,95 +2,40 @@
 /* utility classes – allow things to be much mor modular */
 /* ----------- */
 
-/* Anything that is not the first child – of course, also last child with margin-bottom is possible */
+.container {
+    display: grid;
+    padding-inline: 3em;
+    /* margin-inline: auto;*/
+    max-width: 88rem;
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 2rem);
+}
+
+.grid-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* anything that is not the first child */
 .flow > *:where(:not(:first-child))  { 
     margin-top: 1rem;
 }
 
-.container {
-    display: flex;
-    padding-inline: 2em;
-    margin-inline: auto;
-    max-width: 88rem;
-}
-
+/* primary navigation & design-system */
 .flex {
     display: flex;
     gap: var(--gap, 1rem);
 }
 
-.grid {
-    display: grid;
-    gap: var(--gap, 1rem);
-}
-
-.flow > *:where(:not(:first-child)) {
-    margin-top: var(--flow-space, 1rem);
-}
-
 .d-block {
     display: block;
 }
-
-
-
-/* Even columns */
-
-.even-columns {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 2rem;
-}
-
-/* select all direct children */
-.even-columns > * {
-    flex-basis: 100%;
-    flex-grow: 1;
-}
-
-/*
-/* Uneven columns 
-
-.uneven-column-70:nth-of-type(1){
-    flex: 3;
-}
-
-.uneven-column-70:nth-of-type(2){
-    flex: 1;    
-}
-
-.uneven-column-40:nth-of-type(1){
-    flex: 1;
-}
-
-.uneven-column-40:nth-of-type(2){
-    flex: 3;    
-}
-*/
-
-
-@media (max-width: 35em) {
-    .even-columns {
-        flex-direction: column;
-    }
-}
-
-
-/*
-.container-grid {
-    display: grid;
-    column-gap: var(--container-gap, 2rem);
-    grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(2rem, 1fr);
-}
-
-.container-grid > *:first-child {
-    grid-column: 2;
-}
-
-.container-grid > *:last-child {
-    grid-column: 3;
-}
-*/
 
 /* screen reader only */
 .sr-only {
@@ -103,11 +48,57 @@
     clip: rect(0, 0, 0, 0);
     white-space: nowrap; /* added line */
     border: 0;
-  }
+}
 
-  .box {
-    background: lightblue;
-    padding: 3rem;
+img {
+    width: 100%;
+    display: block;
+}
+
+.hero {
+    max-width: 100%;
+    margin-top: 7rem;
+}
+
+@media (min-width: 35rem) {
+    .hero {
+        max-width: 70%;
+        margin-top: 10rem;
+    }
+}
+
+
+/* ----------- */
+/* table CV */
+/* ----------- */
+
+.border-right {
+    border-right: 1px solid #212121;
+}
+
+.table__CV {
+    border-collapse:collapse;
+}
+
+.table__CV td {
+    padding: 0rem 3rem 0.5rem 0rem
+}
+
+.table__CV td.padding-left {
+    padding-left: 3rem;
+}
+
+@media (min-width: 35rem) {
+    .table__CV td {
+        padding: 0rem 8rem 0.5rem 0rem
+    }
+    .table__CV td.padding-left {
+        padding-left: 1rem;
+    }
+}
+
+table td, table td * {
+    vertical-align: top;
 }
 
 
@@ -141,7 +132,6 @@
     --fw-300: 300;
 }
 
-
 /* colors */
 
 .bg-dark { background-color: hsl( var(--clr-dark) );}
@@ -156,7 +146,6 @@
 .text-brand { color: hsl( var(--clr-brand) );}
 .text-brand-light { color: hsl( var(--clr-brand-light) );}
 .text-accent { color: hsl( var(--clr-accent) );}
-
 
 /* typography */
 
@@ -196,7 +185,7 @@
 
 
 /* ------------------- */
-/* Compontents         */
+/* components         */
 /* ------------------- */
 
 .large-button {
@@ -218,29 +207,10 @@
     opacity: 1;
 }
 
-
-
-/* ------------------------- */
-/* sections */
-
-
-#entry {
-    margin-top: 10em;
-}
-
 /* Footer */
 
 .bg-footer {
     padding-top: 1rem;
     background-color: rgba(51, 51, 51, 1);
     color: rgba(255, 255, 255, 1);
-}
-
-/* Media Query */
-
-@media (max-width: 35em) {
-    .intro img,
-    img {
-        width: 100%;
-    }
 }

@@ -12,10 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="navigation.css">
-    <link rel="stylesheet" href="slider-images.css">
+    <link rel="stylesheet" href="resources/css/reset.css">
+    <link rel="stylesheet" href="resources/css/slider-images.css">
+    <link rel="stylesheet" href="resources/css/styles.css">
+    <link rel="stylesheet" href="resources/css/navigation.css">
 
     <title>kaybee webdesign // Cape Town // Bremen</title>
 
@@ -23,57 +23,47 @@
 
 <body class="bg-brand text-dark ff-sans-normal">
 
-    <!-- /* check if you need the full width, when he set up the navigatin */ -->
-    <div class="container-full">
-        <header class="primary-header">
-            <div class="bg-brand-light navbar">
-                <div class="logo">
-                    <a href="#">kaybee</a>
-                </div>
-                <button class="mobile-nav-toggle" aria-controls="primary-navigation">
-                    <span class="sr-only" aria-expanded="false">Menu</span></button>
-                <nav>
-                    <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
-                        <li>
-                            <a class="uppercase text-light letter-spacing-2" href=" #" title="Projects">
-                                <span><em aria-hidden="true">Projects</em><em class="hover">Projects</em></span></a>
-                        </li>
-                        <li>
-                            <a class="uppercase text-light letter-spacing-2" href=" #" title="About">
-                                <span><em aria-hidden="true">About</em><em class="hover">About</em></span></a>
-                        </li>
-                        <li>
-                            <a class="uppercase text-light letter-spacing-2" href=" #" title="CV">
-                                <span><em aria-hidden="true">CV</em><em class="hover">CV</em></span></a>
-                        </li>
-                        <li>
-                            <a class="uppercase text-light letter-spacing-2" href=" #" title="Contact">
-                                <span><em aria-hidden="true">Contact</em><em class="hover">Contact</em></span></a>
-                        </li>
-                    </ul>
-                </nav>
+    <header class="primary-header">
+        <div class="navbar bg-brand-light">
+            <div class="logo">
+                <a href="#">kaybee</a>
             </div>
-        </header>
-    </div>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+                <span class="sr-only" aria-expanded="false">Menu</span></button>
+            <nav>
+                <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                    <li>
+                        <a class="uppercase text-light letter-spacing-2" href=" #" title="Projects">
+                            <span><em aria-hidden="true">Projects</em><em class="hover">Projects</em></span></a>
+                    </li>
+                    <li>
+                        <a class="uppercase text-light letter-spacing-2" href=" #" title="About">
+                            <span><em aria-hidden="true">About</em><em class="hover">About</em></span></a>
+                    </li>
+                    <li>
+                        <a class="uppercase text-light letter-spacing-2" href=" #" title="CV">
+                            <span><em aria-hidden="true">CV</em><em class="hover">CV</em></span></a>
+                    </li>
+                    <li>
+                        <a class="uppercase text-light letter-spacing-2" href=" #" title="Contact">
+                            <span><em aria-hidden="true">Contact</em><em class="hover">Contact</em></span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
-
         <section id="entry">
             <div class="container">
-                <div class="flex uneven-column-70">
-                    <div class="intro flow">
-                        <h1 class="fs-900 fw-700 uppercase">Hej</h1>
-                        <p class="fs-500 fw-400">I'm Katrin</p>
-                        <div>
-                            <img src="resources/img/home_me-50.jpg"
-                                alt="picture of a person walking on the beach picking up litter">
-                            <p class="fs-500 fw-300 letter-spacing-3">Lorem ipsum dolor sit amet, consectetuer
-                                adipiscing
-                                elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
-                                ridiculus mus. Donec quam felis, ultricies nec.</p>
-                            <a href="#" class="large-button ff-sans-serif fs-500 text-light bg-dark">More about me</a>
-                        </div>
-                    </div>
+                <div class="grid hero">
+                    <h1 class="fs-900 fw-700 uppercase">Hej</h1>
+                    <p class="fs-500 fw-400">I'm Katrin</p>
+                    <img src="resources/img/home_me-50.jpg" alt="person walking on a beach picking up litter">
+                    <p class="fs-500 fw-300 letter-spacing-3">One morning, when Gregor Samsa woke from troubled dreams,
+                        he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back,
+                        and if he lifted his head a little he could see his brown belly, slightly domed and divided by
+                        arches into stiff sections. </p>
                 </div>
             </div>
         </section>
@@ -82,29 +72,7 @@
             <div class="container">
                 <div class="flow">
                     <h2 class="fs-800 fw-700 uppercase">Headline 2</h2>
-                    <div class="even-columns">
-                        <div><img src="resources/img/home_about_capepoint-50.jpg"
-                                alt="picture of a person walking on the beach picking up litter">
-                            <p class="fs-500 fw-300 letter-spacing-3">Lorem ipsum dolor sit amet, consectetuer
-                                adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                            <a href="#" class="large-button ff-sans-serif fs-500 text-light bg-dark">More about me</a>
-                        </div>
-                        <div><img src="resources/img/home_about_buttreasure-50.jpg"
-                                alt="picture of a person walking on the beach picking up litter">
-                            <p class="fs-500 fw-300 letter-spacing-3">Lorem ipsum dolor sit amet, consectetuer
-                                adipiscing elit. Aenean commodo ligula eget dolor. </p>
-                            <a href="#" class="large-button ff-sans-serif fs-500 text-light bg-dark">More about me</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="container">
-                <div class="flow">
-                    <h2 class="fs-800 fw-700 uppercase">Headline 2</h2>
-                    <div class="even-columns">
+                    <div class="grid grid-3">
                         <div><img src="resources/img/home_about_capepoint-50.jpg"
                                 alt="picture of a person walking on the beach picking up litter">
                             <p class="fs-500 fw-300 letter-spacing-3">Lorem ipsum dolor sit amet, consectetuer
@@ -130,7 +98,7 @@
         </section>
 
         <section id="slider-images" class="slider-container" aria-label="photos">
-            <div class="container-full">
+            <div class="flow">
                 <div class="project-container">
                     <button class="pre-btn">&#8249;</button>
                     <button class="next-btn">&#8250;</button>
@@ -194,26 +162,24 @@
             <div class="container">
                 <div class="flow">
                     <h2 class="fs-800 fw-700 uppercase">Headline 2</h2>
-                    <div class="even-columns">
+                    <div class="grid grid-2">
                         <div><img src="resources/img/home_about_capepoint-50.jpg"
                                 alt="picture of a person walking on the beach picking up litter">
                             <p class="fs-500 fw-300 letter-spacing-3">Lorem ipsum dolor sit amet, consectetuer
                                 adipiscing elit. Aenean commodo ligula eget dolor.</p>
-                            <a href="#" class="large-button ff-sans-serif fs-500 text-light bg-dark">More about
-                                me</a>
+                            <a href="#" class="large-button ff-sans-serif fs-500 text-light bg-dark">More about me</a>
                         </div>
                         <div><img src="resources/img/home_about_buttreasure-50.jpg"
                                 alt="picture of a person walking on the beach picking up litter">
                             <p class="fs-500 fw-300 letter-spacing-3">Lorem ipsum dolor sit amet, consectetuer
                                 adipiscing elit. Aenean commodo ligula eget dolor. </p>
-                            <a href="#" class="large-button ff-sans-serif fs-500 text-light bg-dark">More about
-                                me</a>
+                            <a href="design-system.html"
+                                class="large-button ff-sans-serif fs-500 text-light bg-dark">Design System</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
 
     </main>
 

@@ -28,17 +28,6 @@ p {
     font-weight: 400;
 }
 
-/* body */
-body {
-    font-family: var(--ff-sans-normal);
-    font-size: var(500);
-    color: hsl( var(--clr-dark) );
-    background-color: hsl( var(--clr-brand) );
-    line-height: 1.6; /* browser default: 1.4 */
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
 /* make images easier to wotk with*/
 /* max-width: images can shrink when viewport gets narrower */
 img, 

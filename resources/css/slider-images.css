@@ -3,7 +3,7 @@
 .slider-container {
     width: 100%;
     position: relative;
-    background: hsl( var(--clr-brand-light) );
+    background-color: var(--background-navigation);
 }
   
   .project-container {
@@ -41,8 +41,9 @@
     position: absolute;
     right: 10px;
     top: 10px;
-    color: hsl( var(--clr-light) );
-    background-color: hsl( var(--clr-dark) / .8 );
+    color: var(--foreground);
+    background-color: var(--background);
+    opacity: .8;
     padding: 0.5rem 0.8rem;
     text-transform: capitalize;
   }
@@ -63,8 +64,9 @@
     font-size: 2.5rem;
     line-height: 3.2rem;
     transform: translateY(-50%);
-    background-color: hsl( var(--clr-light) / .6 );
-    color: hsl( var(--clr-dark) / 1 );
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    opacity: .6;
     cursor: pointer;
   }
   
@@ -82,8 +84,9 @@
   
   .pre-btn:hover,
   .next-btn:hover {
-    background-color: rgba(255, 255, 255, 1);
-    color: rgba(33, 33, 33, 1);
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    opacity: 1;
   }
   
   

@@ -4,9 +4,16 @@
 
 .container {
     display: grid;
-    padding-inline: 3em;
+    padding-inline: 1em;
     /* margin-inline: auto;*/
-    max-width: 88rem;
+    max-width: 94rem;
+}
+
+@media (min-width: 35rem) {
+    .container {
+        padding-inline: 3em;
+        max-width: 88rem;
+    }
 }
 
 .grid {
@@ -219,12 +226,11 @@ body {
 /* components         */
 /* ------------------- */
 
-.large-button {
+.primary-button {
     position: relative;
     display: inline-grid; /* instead of block or inline-block to center the item nicely with next line */
     place-items: center;
-    padding: 0 2em;
-    aspect-ratio: 7 / 2.5; 
+    padding: 1em 2em;
     color: var(--clr-light);
     background-color: var(--clr-dark);
     text-decoration: none;
@@ -233,18 +239,10 @@ body {
     transition: background-color 500ms ease-in-out;
 }
 
-.large-button:hover,
-.large-button:focus {
+.primary-button:hover,
+.primary-button:focus {
     background-color: var(--clr-accent);
     opacity: 1;
-}
-
-/* Footer */
-
-.bg-footer {
-    padding-top: 1rem;
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
 }
 
 /* Dark mode button */
@@ -261,3 +259,20 @@ body {
     height: 30px;
     line-height: 0px;
   }
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--background-navigation);
+    color: var(--foreground-navigation);
+}
+
+.footer a, 
+.footer a:hover {
+    color: var(--foreground-navigation);
+    opacity: .6;
+    text-decoration: none;
+}
+

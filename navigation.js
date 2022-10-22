@@ -16,6 +16,4 @@ navToggle.addEventListener("click", () => {
 
     // console.log(visibility);
     console.log(navToggle.getAttribute('aria-expanded'));
-
-    // if the nav is open, close it
 })
